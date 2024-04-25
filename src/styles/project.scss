@@ -1,0 +1,152 @@
+@use 'variables';
+
+.project {
+    height: 100%;
+    padding-top: 6vh;
+
+    h2 {
+        padding: 30px 0px;
+    }
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        row-gap: 20px;
+
+        &__my {
+            width: 350px;
+            height: 546px;
+            background: rgb(56, 66, 97);
+            border-radius: 30px;
+            margin: 0 auto;
+            
+
+            &__background {
+                position: relative;
+                width: 100%;
+                height: 50%;
+                background-image: url(../img/Project/background.jpg);
+                background-size: 50%;
+                border-radius: 30px 30px 0 0;
+
+                img {
+                    width: 80%;
+                    border-radius: 15px;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -40%);
+                    object-fit: cover;
+                    z-index: 1;
+                }
+
+                &__links {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -30%);
+                    z-index: 999;
+                    width: 150px;
+                    height: 60px;
+                    display: flex;
+                    justify-content: space-around;
+                    
+
+                    .links {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 15px;
+                        background: variables.$buttonLinks;
+                        display: none;
+
+                        #svg {
+                            fill: white;
+                        }
+                    }
+                }
+
+                .front-end {
+                    width: 100px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 30px;
+                    position: absolute;
+                    top: 10px;
+                    left: 20px;
+                    background-color: #00FFFF;
+
+                    font-family: "Roboto" sans-serif;
+                    font-weight: 700;
+                }
+            }
+            &__background::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 30px 30px 0 0;
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+            }
+
+            &__description {
+                width: 100%;
+                height: 50%;
+                border-radius: 0 0 30px 30px;
+                padding: 20px;
+
+                p {
+                    font-size: 18px;
+                    color: variables.$colorWhite;
+                }
+
+                ul {
+                    list-style-type: disc;
+                    li {
+                        color: variables.$colorWhite;
+
+                        &::marker {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .project {
+            padding: 0;
+    
+            &__container {
+                width: 95%;
+                display: block;
+    
+                &__my {
+                    width: 100%;
+                    height: 60vh;
+                    margin-bottom: 20px;
+    
+                    &__background {
+                        img {
+                            width: 80%;
+                            height: 60%;
+                        }
+                        @media screen and (min-width: 360px) and (max-width: 480px) {
+                            height: 30vh;
+                        }
+                    }
+                    @media screen and (min-width: 360px) and (max-width: 480px) {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

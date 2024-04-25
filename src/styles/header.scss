@@ -1,0 +1,106 @@
+@use 'variables';
+
+.header {
+    width: 100%;
+    height: 10vh;
+    padding: 20px;
+    background: variables.$background;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    &__title {
+        font-size: 3em;
+        color: rgba(59, 130, 256, $alpha: 1.5);
+    }
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .nav {
+
+            &__list {
+                display: flex;
+                list-style: none;
+                gap: 20px;
+
+                &__item {
+                    height: 26px;
+
+                    a {
+                        font-size: 18px;
+                        color: rgb(180, 169, 169);
+                        text-decoration: none;
+
+                        &:hover {
+                        color: rgb(59, 130, 256);
+                        cursor: pointer;
+                    }
+                    }
+
+                    &--btn--cliked {
+                        color: rgb(59, 130, 256);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.borderBottom {
+    border-bottom: 2px solid rgb(59, 130, 256);
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        position: relative;
+        top: auto;
+        left: auto;
+        z-index: auto;
+        padding: 0;
+
+        &__title {
+            font-size: 1.5em;
+
+        }
+
+        &__container {
+            height: 10vh;
+            display: flex;
+
+            .nav {
+                width: 60%;
+                
+                @media screen and (min-width: 360px) and (max-width: 480px) {
+                    width: 70%;
+                }
+
+                &__list {
+                    width: 100%;
+                    padding: 0;
+
+                    @media screen and (min-width: 360px) and (max-width: 480px) {
+                        width: 100%;
+                        justify-content: space-around;
+                        gap: 5px;
+                    }
+
+                    &__item {
+                        @media screen and (min-width: 360px) and (max-width: 480px) {
+                            font-size: 8px;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (min-width: 360px) and (max-width: 480px) {
+                h1 {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
