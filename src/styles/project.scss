@@ -150,3 +150,17 @@
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .project {
+        padding-top: 3vh;
+        &__container {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+
+            &__my {
+                width: 90%;
+            }
+        }
+    }
+}

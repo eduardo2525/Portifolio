@@ -21,7 +21,7 @@
         align-items: center;
         
         .nav {
-
+            
             &__list {
                 display: flex;
                 list-style: none;
@@ -99,6 +99,35 @@
             @media screen and (min-width: 360px) and (max-width: 480px) {
                 h1 {
                     font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .header {
+
+        &__container {
+            .nav {
+                width: 50%;
+                height: 50px;
+
+                &__list {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    margin: 0;
+
+                    &__item {
+                        height: 70%;
+                        
+                        a {
+                            font-size: 1.5em;
+                        }
+                    }
                 }
             }
         }
