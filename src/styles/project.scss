@@ -22,7 +22,6 @@
             background: rgb(56, 66, 97);
             border-radius: 30px;
             margin: 0 auto;
-            
 
             &__background {
                 position: relative;
@@ -161,6 +160,14 @@
             &__my {
                 width: 90%;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1365px){
+    .project {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
