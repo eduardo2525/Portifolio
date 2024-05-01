@@ -88,8 +88,10 @@
                     }
 
                     &__item {
-                        @media screen and (min-width: 360px) and (max-width: 480px) {
-                            font-size: 8px;
+                        a {
+                            @media screen and (min-width: 360px) and (max-width: 480px) {
+                                font-size: 1em;
+                            }
                         }
                     }
                 }
