@@ -14,12 +14,10 @@
         justify-content: center;
         align-items: center;
 
-        &__img {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            border: 2px solid black;
-        }
+            &__img {
+                width: 500px;
+                height: 500px;
+            }
     }
 
     &__me {
@@ -134,8 +132,8 @@
             height: 50%;
 
             &__img {
-                width: 300px;
-                height: 300px;
+                width: 90%;
+                height: 90%;
             }
         }
 
@@ -194,8 +192,8 @@
             width: 60%;
 
             &__img {
-                width: 300px;
-                height: 300px;
+                width: 90%;
+                height: 90%;
             }
         }
 
@@ -212,6 +210,16 @@
 
             &__contact {
                 width: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1365px){
+    .about {
+        &__me {
+            h1 {
+                font-size: 2.2em;
             }
         }
     }

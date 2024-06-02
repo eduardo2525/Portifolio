@@ -251,7 +251,8 @@
 
 @media screen and (max-width: 767px) {
     .skills {
-        padding: 0;
+        
+        padding: 5px;
         
         .tabs {
             width: 95%;
@@ -325,7 +326,7 @@
             }
         }
         @media screen and (min-width: 360px) and (max-width: 480px) {
-            padding-top: 20px;
+            padding-top: 50px;
             height: 100%;
         }
     }
