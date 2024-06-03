@@ -72,9 +72,11 @@
             display: flex;
 
             .nav {
-                width: 60%;
+                
+
                 @media screen and (min-width: 360px) and (max-width: 480px) {
                     width: 70%;
+                    justify-content: space-around;
                 }
 
                 &__list {
@@ -112,7 +114,7 @@
             .nav {
                 width: 50%;
                 height: 50px;
-                
+
                 &__list {
                     width: 100%;
                     display: flex;
