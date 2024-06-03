@@ -19,23 +19,10 @@ document.querySelector('a[href="#project"]').addEventListener('click', (e) => {
         document.getElementById('project').scrollIntoView({behavior: 'smooth'});
     }, 1000);
 });
-0
+
 // Evento de Sobre Mim
 const aboutMe = document.querySelector(".about__me");
-const navItem = document.querySelectorAll('.nav__list__item');
-
-
-navItem.forEach((nav, index) => {
-    nav.addEventListener('click', ()=> {
-        navItem.forEach((nav) => {
-            nav.classList.remove('borderBottom');
-            nav.classList.remove('nav__list__item--btn--cliked')
-        });
-
-        nav.classList.add('borderBottom');
-        nav.classList.add('nav__list__item--btn--cliked')
-    });
-});
+const links = document.querySelectorAll('.nav__list__item a')
 
 aboutMe.addEventListener("mouseover", aparecerSombra);
 aboutMe.addEventListener("mouseout", removeSombra);
@@ -56,6 +43,27 @@ function removeSombra() {
         primaryTitle.style.boxShadow = '';
     };
 };
+
+window.onscroll = () => {
+    const sections = document.querySelectorAll('.secao');
+    let top = window.scrollY;
+
+    sections.forEach(section => {
+        let offSet = section.offsetTop - 60;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+
+        if (top >= offSet && top < offSet + height) {
+            links.forEach(link => {
+                link.classList.remove('nav__list__item--btn--active');
+                let activeLink = document.querySelector('.nav__list__item a[href="#' + id + '"]');
+                if (activeLink) {
+                    activeLink.classList.add('nav__list__item--btn--active');
+                }
+            });
+        }
+    });
+}
 
 // tabs Sobre mim
 
