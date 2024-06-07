@@ -1,3 +1,4 @@
+AOS.init();
 // Evento das nav
 document.querySelector('a[href="#about"]').addEventListener('click', (e) => {
     e.preventDefault();

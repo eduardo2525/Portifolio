@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.scss">
 </head>
 <body>
@@ -32,17 +33,17 @@
     </header>
     <main>
         <section class="about container secao" id="about">
-            <div class="about__Photograph">
+            <div class="about__Photograph" data-aos="fade-right">
                 <img class="about__Photograph__img" src="img/Eduardo.png" alt="minha imagem">
             </div>
-            <div class="about__me">
+            <div class="about__me"  data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="2000">
                 <h1 class="primary__title">Especialização em Front-End</h1>
                 <p class="paragraph">DESENVOLVEDOR FRONT-END</p>
                 <h2 class="secundary__title">Olá, meu nome é Eduardo Silva</h2>
                 <p class="paragraph">Desenvolvedor Front-End com foco pronunciado e entusiasmo pela construção de soluções front-end poderosas.</p>
                 
                 <div class="about__me__contact">
-                    <a class="button__link" href="https://drive.google.com/file/d/1-kh_Qrf7ef2CdM7-8wrXkWtXv0UfKPdP/view" target="_blank">
+                    <a class="button__link" href="" target="_blank">
                         Download CV
                         <i class="bi bi-cloud-arrow-down"></i>
                     </a>
@@ -72,7 +73,7 @@
                     <i class="bi bi-search"></i>
                     Motivado pela curiosidade incessante, me dedico à codificação, explorando novos projetos e aprendendo constantemente.
                 </p>
-                <div class="skills__information__my">
+                <div class="skills__information__my"  data-aos="zoom-in" data-aos-offset="500" data-aos-easing="ease-in-sine">
                     <div class="skills__information__my__container">
                         <i class="bi bi-person"></i>
                         <span>Eduardo Silva</span>
@@ -168,7 +169,7 @@
                 </div>
             </div>
         </section>
-        <section class="project container secao" id="project">
+        <section class="project container secao" id="project" data-aos="fade-up-right">
             <h2 class="title__gray">Meus Projetos</h2>
             <div class="project__container">
                 <div class="project__container__my">
@@ -289,6 +290,7 @@
         </section>
     </main>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>
